@@ -32,8 +32,14 @@ public class App {
         email = input.nextLine();
         phone = input.nextLine();
         productName = input.nextLine();
-        quantity = input.nextInt();
-        price = input.nextDouble();
+        try {
+            quantity = input.nextInt();
+            price = input.nextDouble();
+        }
+        catch (NumberFormatException e){
+            System.out.println("Ошибка ввода!");
+        }
+
     }
 
     // Передача данных на обработку.
