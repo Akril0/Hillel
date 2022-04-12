@@ -12,7 +12,7 @@ public class App {
     static double price;
     static String roundBonus;
     static ProductA product;
-    static MerchantA merchantA;
+    static Merchant merchantA;
     static String infoMerchant;
     static String infoProduct;
 
@@ -39,7 +39,7 @@ public class App {
     // Здесь же получение расчета и округления бонуса.
     // Получение шаблона для вывода.
     private static String processData() {
-        merchantA = new MerchantA(merchantName, phone, email);
+        merchantA = new Merchant(merchantName, phone, email);
         infoMerchant = merchantA.infoMerchant();
         product = new ProductA(productName, quantity, price);
         infoProduct = product.infoProduct();
