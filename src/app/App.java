@@ -11,7 +11,7 @@ public class App {
     static int quantity;
     static double price;
     static String roundBonus;
-    static ProductA product;
+    static Product product;
     static Merchant merchantA;
     static String infoMerchant;
     static String infoProduct;
@@ -41,7 +41,7 @@ public class App {
     private static String processData() {
         merchantA = new Merchant(merchantName, phone, email);
         infoMerchant = merchantA.infoMerchant();
-        product = new ProductA(productName, quantity, price);
+        product = new Product(productName, quantity, price);
         infoProduct = product.infoProduct();
         double sales = product.calcSales(quantity, price);
         roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
